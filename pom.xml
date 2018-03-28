@@ -85,5 +85,7 @@
         <module>learn-javaspi</module>
         <module>learn-pattern</module>
         <module>learn-designpattern</module>
+        <module>learnother</module>
+        <module>learn-other</module>
     </modules>
 </project>
