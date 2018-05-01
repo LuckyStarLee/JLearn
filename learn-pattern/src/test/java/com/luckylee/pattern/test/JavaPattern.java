@@ -31,4 +31,12 @@ public class JavaPattern {
             System.out.println(m.start() + ":" + m.end());
         }
     }
+
+    @Test
+    public void testRegular() {
+        String regular = "^\\d{10,}$";
+        String ss="11111111111111111111111111111111111111";
+        System.out.println(ss.length());
+        System.out.println(Pattern.matches(regular, ss));
+    }
 }
