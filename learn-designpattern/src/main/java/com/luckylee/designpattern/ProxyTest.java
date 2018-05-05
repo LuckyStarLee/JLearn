@@ -1,8 +1,6 @@
 package com.luckylee.designpattern;
 
 
-import java.util.Objects;
-
 /**
  * @author lining
  */
