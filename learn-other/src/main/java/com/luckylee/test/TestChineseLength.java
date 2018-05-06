@@ -1,4 +1,4 @@
-package com.luckylee.test.chineselength;
+package com.luckylee.test;
 
 import java.io.UnsupportedEncodingException;
 

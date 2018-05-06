@@ -1,4 +1,4 @@
-package com.luckylee.test.chineselength;
+package com.luckylee.test;
 
 import sun.misc.BASE64Decoder;
 import sun.misc.BASE64Encoder;
