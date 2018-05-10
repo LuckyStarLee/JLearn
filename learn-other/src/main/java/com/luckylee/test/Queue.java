@@ -1,6 +1,13 @@
 package com.luckylee.test;
 
 
+import sun.misc.Unsafe;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Stack;
+import java.util.TreeMap;
+
 /**
  * @program: JLearn
  * @author: lining
@@ -30,7 +37,7 @@ public class Queue<E> {
         }
     }
 
-    public E pop() throws  Exception {
+    public E pop() throws Exception {
         if (head == null) {
             throw new Exception("队列为空");
         } else {
@@ -40,15 +47,25 @@ public class Queue<E> {
         }
     }
 
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
         Queue<Integer> q = new Queue<>();
 
-       /* for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < 6; i++) {
             q.add(i);
-        }*/
+        }
 
-        for (int i = 0; i <6 ; i++) {
+        for (int i = 0; i < 6; i++) {
             System.out.println(q.pop());
+        }
+
+        Queue<Map<String, Object>> q2 = new Queue<>();
+        for (int i = 0; i < 6; i++) {
+            Map<String, Object> map = new HashMap<>();
+            map.put(i + "", i);
+            q2.add(map);
+        }
+        for (int i = 0; i < 6; i++) {
+            System.out.println(q2.pop());
         }
     }
 }
