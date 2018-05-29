@@ -93,5 +93,6 @@
         <module>learn-designpattern</module>
         <module>learn-other</module>
         <module>learn-signature</module>
+        <module>learn-rabbitmq-parent</module>
     </modules>
 </project>
