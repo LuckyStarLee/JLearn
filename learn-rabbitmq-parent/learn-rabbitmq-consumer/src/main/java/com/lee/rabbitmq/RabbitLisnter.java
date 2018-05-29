@@ -15,6 +15,6 @@ public class RabbitLisnter {
     private static  final Logger log=LoggerFactory.getLogger(RabbitLisnter.class);
     @RabbitListener(queues = {"testQ"})
     public  void recieve(Object message){
-        log.info("recive msg: "+message);
+        log.info("recieve msg: "+message);
     }
 }
