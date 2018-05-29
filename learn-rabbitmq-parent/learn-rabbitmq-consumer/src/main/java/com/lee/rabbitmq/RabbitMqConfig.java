@@ -13,9 +13,9 @@ import org.springframework.context.annotation.Configuration;
  **/
 @Configuration
 public class RabbitMqConfig {
-    @Value("${messaage.test.exchange}")
+    @Value("${message.test.exchange}")
     private String exchange;
-    @Value("${messaage.test.routekey}")
+    @Value("${message.test.routekey}")
     private String routeKey;
 
     @Bean

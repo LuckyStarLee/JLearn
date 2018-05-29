@@ -26,9 +26,9 @@ public class Schedule {
     @Autowired
     private RabbitTemplate rabbitTemplate;
 
-    @Value("${messaage.test.exchange}")
+    @Value("${message.test.exchange}")
     private String exchange;
-    @Value("${messaage.test.routekey}")
+    @Value("${message.test.routekey}")
     private String routeKey;
     @Scheduled(fixedRate = 5000)
     public void print(){
