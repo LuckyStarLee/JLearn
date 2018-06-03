@@ -15,7 +15,8 @@ import javax.annotation.PostConstruct;
  **/
 @Configuration
 public class RabbitmqConfig {
-   private RabbitTemplate rabbitTemplate;
+    private RabbitTemplate rabbitTemplate;
+
     @Autowired
     public void setRabbitTemplate(RabbitTemplate rabbitTemplate) {
         this.rabbitTemplate = rabbitTemplate;

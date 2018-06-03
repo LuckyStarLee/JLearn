@@ -27,12 +27,14 @@ public class RabbitMqConfig {
     public Exchange exchange() {
         return ExchangeBuilder.topicExchange(exchange).build();
     }
+
     @Bean
-   public Binding bind(){
-       return BindingBuilder.bind(queue()).to(exchange()).with(routeKey).noargs();
+    public Binding bind() {
+        return BindingBuilder.bind(queue()).to(exchange()).with(routeKey).noargs();
     }
+
     @Bean
-    public static Jackson2JsonMessageConverter jackson2JsonMessageConverter() {
+    public Jackson2JsonMessageConverter jackson2JsonMessageConverter() {
         return new Jackson2JsonMessageConverter();
     }
 }

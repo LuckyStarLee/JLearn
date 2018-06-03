@@ -99,5 +99,6 @@
         <module>learn-other</module>
         <module>learn-signature</module>
         <module>learn-rabbitmq-parent</module>
+        <module>learn-dubbo</module>
     </modules>
 </project>

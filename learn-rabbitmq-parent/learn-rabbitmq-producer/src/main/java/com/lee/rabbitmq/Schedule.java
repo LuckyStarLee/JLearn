@@ -22,7 +22,7 @@ import java.util.UUID;
 @Component
 @DependsOn({"rabbitmqConfig"})
 public class Schedule {
-    private static  final Logger log=LoggerFactory.getLogger(Schedule.class);
+    private static final Logger log = LoggerFactory.getLogger(Schedule.class);
     @Autowired
     private RabbitTemplate rabbitTemplate;
 
@@ -30,18 +30,19 @@ public class Schedule {
     private String exchange;
     @Value("${message.test.routekey}")
     private String routeKey;
+
     @Scheduled(fixedRate = 5000)
-    public void print(){
+    public void print() {
         //log.info("test schedule...");
-        String context="exchange: "+exchange+" routeKey: "+routeKey+" ...";
-        MyMessage myMessage=new MyMessage();
-        String id=UUID.randomUUID().toString();
+        String context = "exchange: " + exchange + " routeKey: " + routeKey + " ...";
+        MyMessage myMessage = new MyMessage();
+        String id = UUID.randomUUID().toString();
         myMessage.setId(id);
         myMessage.setContext(context);
-        CorrelationData data=new CorrelationData(id);
-        MessageProperties properties=new MessageProperties();
-        Message message=rabbitTemplate.getMessageConverter().toMessage(myMessage,properties);
-        rabbitTemplate.convertAndSend(exchange,routeKey,message,data);
+        CorrelationData data = new CorrelationData(id);
+        MessageProperties properties = new MessageProperties();
+        Message message = rabbitTemplate.getMessageConverter().toMessage(myMessage, properties);
+        rabbitTemplate.convertAndSend(exchange, routeKey, message, data);
     }
 
 }

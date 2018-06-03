@@ -16,13 +16,15 @@ import org.springframework.stereotype.Component;
  **/
 @Component
 public class RabbitLisnter {
-    private static  final Logger log=LoggerFactory.getLogger(RabbitLisnter.class);
+    private static final Logger log = LoggerFactory.getLogger(RabbitLisnter.class);
     private Jackson2JsonMessageConverter jackson2JsonMessageConverter;
+
     @RabbitListener(queues = {"testQ"})
-    public  void recieve(Message message){
-       Object o= jackson2JsonMessageConverter.fromMessage(message);
-        log.info("recieve msg: "+JSON.toJSONString(o));
+    public void recieve(Message message) {
+        Object o = jackson2JsonMessageConverter.fromMessage(message);
+        log.info("recieve msg: " + JSON.toJSONString(o));
     }
+
     @Autowired
     public void setJackson2JsonMessageConverter(Jackson2JsonMessageConverter jackson2JsonMessageConverter) {
         this.jackson2JsonMessageConverter = jackson2JsonMessageConverter;
