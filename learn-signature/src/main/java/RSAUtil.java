@@ -57,6 +57,7 @@ public class RSAUtil {
             keys.put("privateKey", prikey);
             keys.put("privateKeyStr", Base64.encode(prikey.getEncoded()));
             System.out.println("privateKeyStr:::\n"+keys.get("privateKeyStr"));
+            System.out.println("encode again privateKeyStr:::\n"+Base64.encode((keys.get("privateKeyStr")).toString().getBytes()));
             Certificate cert = ks.getCertificate(keyAlias);
             PublicKey pubkey = cert.getPublicKey();
             keys.put("publicKey1", pubkey);
@@ -96,6 +97,7 @@ public class RSAUtil {
             keys.put("publicKey", x509Certificate.getPublicKey());
             keys.put("publicKeyStr", Base64.encode(x509Certificate.getPublicKey().getEncoded()));
             System.out.println("publicKeyStr:::\n"+keys.get("publicKeyStr"));
+            System.out.println("encode again publicKeyStr:::\n"+Base64.encode((keys.get("publicKeyStr").toString().getBytes())));
         } catch (CertificateException e) {
             e.printStackTrace();
         } catch (IOException e) {

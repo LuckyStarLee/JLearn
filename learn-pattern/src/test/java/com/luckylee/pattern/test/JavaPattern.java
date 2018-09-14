@@ -38,5 +38,19 @@ public class JavaPattern {
         String ss="11111111111111111111111111111111111111";
         System.out.println(ss.length());
         System.out.println(Pattern.matches(regular, ss));
+
+        String minAmt="100";
+        String min="[1-9][0-9]{2}";
+        Pattern minPattern = Pattern.compile(min);
+        Matcher matcher=minPattern.matcher(minAmt);
+        System.out.println("min matcher "+matcher.matches());
+
+
+        String maxAmt="1002000";
+        String max="[1-9][0-9]{2,6}";
+        Pattern maxPattern = Pattern.compile(max);
+        Matcher maxMatcher=maxPattern.matcher(maxAmt);
+        System.out.println("min matcher "+maxMatcher.matches());
     }
+
 }
