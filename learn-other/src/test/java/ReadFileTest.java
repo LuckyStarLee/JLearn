@@ -8,7 +8,7 @@ public class ReadFileTest {
 
     @Test
     public void read() throws Exception {
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(ReadFileTest.class.getResourceAsStream("aa.txt")));
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(ReadFileTest.class.getResourceAsStream("bb.txt")));
         String str = bufferedReader.readLine();
         while (str != null) {
             System.out.println(str.replace(" ", ""));

@@ -1,5 +1,4 @@
 import com.alipay.support.util.Base64;
-import com.unionpay.tpay.WXPayConstants;
 import sun.misc.BASE64Decoder;
 import sun.misc.BASE64Encoder;
 
