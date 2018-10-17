@@ -66,6 +66,7 @@ public class Queue<E> {
         }
         for (int i = 0; i < 6; i++) {
             System.out.println(q2.pop());
+
         }
     }
 }
