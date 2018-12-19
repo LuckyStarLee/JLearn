@@ -160,5 +160,6 @@
         <module>learn-signature</module>
         <module>learn-rabbitmq-parent</module>
         <module>learn-dubbo</module>
+        <module>learn-springboot-starter</module>
     </modules>
 </project>

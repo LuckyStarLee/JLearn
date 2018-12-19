@@ -51,3 +51,6 @@ gradle/
 */.idea/
 .idea/
 unused.txt
+target/
+*.cer
+*.pfx
