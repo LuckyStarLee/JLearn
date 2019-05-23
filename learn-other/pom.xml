@@ -69,5 +69,9 @@
             <artifactId>sdk-alipay-autoconfigue</artifactId>
             <version>2.1.0</version>
         </dependency>
+        <dependency>
+            <groupId>com.googlecode.aviator</groupId>
+            <artifactId>aviator</artifactId>
+        </dependency>
     </dependencies>
 </project>
