@@ -63,7 +63,6 @@
                 </exclusion>
             </exclusions>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/net.guerlab/sdk-alipay-autoconfigue -->
         <dependency>
             <groupId>net.guerlab</groupId>
             <artifactId>sdk-alipay-autoconfigue</artifactId>
@@ -72,6 +71,10 @@
         <dependency>
             <groupId>com.googlecode.aviator</groupId>
             <artifactId>aviator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
         </dependency>
     </dependencies>
 </project>

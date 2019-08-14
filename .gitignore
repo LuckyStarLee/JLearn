@@ -54,3 +54,4 @@ unused.txt
 target/
 *.cer
 *.pfx
+/**/*.p12

@@ -22,7 +22,7 @@ public class RabbitLisnter {
     @RabbitListener(queues = {"testQ"})
     public void recieve(Message message) {
         Object o = jackson2JsonMessageConverter.fromMessage(message);
-        log.info("recieve msg: " + JSON.toJSONString(o));
+        log.info("recieve msg {}" , JSON.toJSONString(o));
     }
 
     @Autowired
